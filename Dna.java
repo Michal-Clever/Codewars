@@ -1,8 +1,10 @@
+// Zamiana liter
+
 public class Dna {
 
     public static void main(String[] args) {
         String dna = "GCAT";
-        // zamiana liter
+
 
         //pierwszy sposób
         String dnaReplace = dna.replace("T", "U");
