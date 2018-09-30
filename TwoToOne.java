@@ -7,9 +7,26 @@ public class TwoToOne {
 
         String s1 = "xyaabbbccccdefww";
         String s2 = "xxxxyyyyabklmopq";
-        
+
+        // Pierwsze rozwiązanie
         StringBuilder sb = new StringBuilder();
         (s1 + s2).chars().distinct().sorted().forEach(c -> sb.append((char) c));
         System.out.println(sb);
+
+        // Drugie rozwiązanie
+        String out = "";
+        String s = s1 + s2;
+        for (char c = 'a'; c <= 'z'; c++)
+        {
+            if (s.contains(c + ""))
+            {
+                out += c;
+            }
+        }
+        System.out.println(out);
+
+
+
+
     }
 }
