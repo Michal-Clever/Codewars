@@ -24,9 +24,5 @@ public class TwoToOne {
             }
         }
         System.out.println(out);
-
-
-
-
     }
 }
