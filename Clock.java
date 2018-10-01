@@ -1,8 +1,4 @@
 public class Clock {
-
-
-    
-
     public static int Past(int h, int m, int s)
     {
         //Happy Coding! ^_^
