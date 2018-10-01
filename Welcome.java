@@ -31,6 +31,4 @@ public class Welcome {
         }
         return greeting.get("english");
     }
-
-
 }
