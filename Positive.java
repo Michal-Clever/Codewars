@@ -7,6 +7,5 @@ public class Positive {
             }
         }
         return sum;
-
     }
 }
