@@ -15,10 +15,8 @@ public class TwoToOne {
         // Drugie rozwiązanie
         String out = "";
         String s = s1 + s2;
-        for (char c = 'a'; c <= 'z'; c++)
-        {
-            if (s.contains(c + ""))
-            {
+        for (char c = 'a'; c <= 'z'; c++) {
+            if (s.contains(c + "")) {
                 out += c;
             }
         }
