@@ -4,7 +4,6 @@ public class TwoToOne {
         //
         //each taken only once - coming from s1 or s2. #Examples: ``` a = "xyaabbbccccdefww" b = "xxxxyyyyabklmopq" longest(a, b) -> "abcdefklmopqwxy"
         //a = "abcdefghijklmnopqrstuvwxyz" longest(a, a) -> "abcdefghijklmnopqrstuvwxyz" ```
-
         String s1 = "xyaabbbccccdefww";
         String s2 = "xxxxyyyyabklmopq";
 
