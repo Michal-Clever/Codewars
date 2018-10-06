@@ -25,7 +25,8 @@ public class StringBuilderRevers {
             tempCharArray[i] =
                     palindrome.charAt(i);
 
-        }System.out.println(tempCharArray);
+        }
+        System.out.println(tempCharArray);
 
         // reverse array of chars
         for (int j = 0; j < len; j++) {
