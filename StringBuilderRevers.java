@@ -22,21 +22,16 @@ public class StringBuilderRevers {
         // put original string in an
         // array of chars
         for (int i = 0; i < len; i++) {
-            tempCharArray[i] =
-                    palindrome.charAt(i);
-
+            tempCharArray[i] = palindrome.charAt(i);
         }
         System.out.println(tempCharArray);
 
         // reverse array of chars
         for (int j = 0; j < len; j++) {
-            charArray[j] =
-                    tempCharArray[len - 1 - j];
+            charArray[j] = tempCharArray[len - 1 - j];
         }
 
-        String reversePalindrome =
-                new String(charArray);
+        String reversePalindrome = new String(charArray);
         System.out.println(reversePalindrome);
     }
-
 }
