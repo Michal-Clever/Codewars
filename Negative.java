@@ -6,7 +6,5 @@ public class Negative {
         System.out.println(-abs(x));
 
         System.out.println((x>0)?-x:x);
-
-
     }
 }
