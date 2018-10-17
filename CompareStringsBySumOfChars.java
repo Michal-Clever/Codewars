@@ -8,5 +8,6 @@ public class CompareStringsBySumOfChars {
 
         return s1.toUpperCase().chars().sum() == s2.toUpperCase().chars().sum();
         
+
     }
 }
