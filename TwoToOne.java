@@ -12,6 +12,7 @@ public class TwoToOne {
         (s1 + s2).chars().distinct().sorted().forEach(c -> sb.append((char) c));
         System.out.println(sb);
 
+        
         // Drugie rozwiązanie
         String out = "";
         String s = s1 + s2;
