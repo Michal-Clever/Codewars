@@ -7,7 +7,5 @@ public class CompareStringsBySumOfChars {
         if (s2 == null || !s2.matches("[a-zA-Z]+")) s2 = "";
 
         return s1.toUpperCase().chars().sum() == s2.toUpperCase().chars().sum();
-        
-
     }
 }
