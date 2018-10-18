@@ -7,6 +7,5 @@ public class FindTheUniqueNumber {
             return arr[arr.length-1];
         else
             return arr[0];
-
     }
 }
