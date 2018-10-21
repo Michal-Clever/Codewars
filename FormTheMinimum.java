@@ -11,7 +11,6 @@ public class FormTheMinimum {
         for (int c : set) {
             result += c;
         } // end for
-
         return Integer.parseInt(result);
     } // end minValue
 }
