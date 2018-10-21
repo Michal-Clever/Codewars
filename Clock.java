@@ -4,6 +4,6 @@ public class Clock {
         //  int h,m,s;
         int sum = ((h * 3600) + (m * 60) + (s));
         return h = sum;
-        
+
     }
 }
