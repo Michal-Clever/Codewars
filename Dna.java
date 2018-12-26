@@ -4,7 +4,7 @@ public class Dna {
 
     public static void main(String[] args) {
         String dna = "GCAT";
-        
+
         //pierwszy sposób
         String dnaReplace = dna.replace("T", "U");
         System.out.println(dnaReplace);
