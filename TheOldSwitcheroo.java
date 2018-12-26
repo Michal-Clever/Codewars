@@ -1,6 +1,5 @@
 public class TheOldSwitcheroo {
 
-
     public static String vowel2Index(String s) {
 
         String newString = "";
@@ -21,9 +20,7 @@ public class TheOldSwitcheroo {
                 newString += s.charAt(i);
             }
         }
-
         return newString;
-
     }
 }
 //Write a function
