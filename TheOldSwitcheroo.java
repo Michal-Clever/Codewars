@@ -1,5 +1,6 @@
 public class TheOldSwitcheroo {
 
+   
     public static String vowel2Index(String s) {
 
         String newString = "";
