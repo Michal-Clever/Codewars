@@ -1,4 +1,9 @@
 public class VasyaClerk {
+
+    public static void main(String[] args) {
+        System.out.println(Tickets(new int[]{25,100}));
+    }
+
     public static String Tickets(int[] peopleInLine) {
         int bill25 = 0, bill50 = 0;
         for (int payment : peopleInLine) {
