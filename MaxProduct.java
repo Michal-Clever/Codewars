@@ -4,7 +4,6 @@ public class MaxProduct {
         System.out.println(adjacentElementsProduct(new int[]{9, 5, 10, 2, 24, -1, -48}));
     }
 
-
     public static int adjacentElementsProduct(int[] array) {
         int ans = Integer.MIN_VALUE;
         for (int i = 0; i < array.length-1; i++)
@@ -12,6 +11,7 @@ public class MaxProduct {
         return ans;
     }
 }
+
 //        Task
 //        Given an array of integers , Find the maximum product obtained from multiplying 2 adjacent numbers in the array.
 //
