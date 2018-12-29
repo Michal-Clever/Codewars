@@ -1,8 +1,8 @@
 public class ExclamationMarksSeries5 {
     public static String removeBang(String str) {
         String retStr = "";
-        for(String s: str.split(" ")) {
-            retStr += s.replaceAll("!+$","") + " ";
+        for (String s : str.split(" ")) {
+            retStr += s.replaceAll("!+$", "") + " ";
         }
         return retStr.trim();
     }
