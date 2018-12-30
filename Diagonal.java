@@ -1,4 +1,5 @@
 public class Diagonal {
+    
 
     public static int diagonalSum(final int[][] matrix) {
         int total = 0;
