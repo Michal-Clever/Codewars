@@ -30,7 +30,6 @@ public class Rainfall {
             }
         return null;
     }
-
 }
 
 //         dataand data1 are two strings with rainfall records of a few cities for months from January to December.
