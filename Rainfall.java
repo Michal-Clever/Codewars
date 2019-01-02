@@ -1,6 +1,5 @@
 public class Rainfall {
-
-
+    
     public static double mean(String town, String strng) {
         if (!strng.contains(town + ":")) return -1;
         double[] v = Rainfall.doubAr(town, strng);
