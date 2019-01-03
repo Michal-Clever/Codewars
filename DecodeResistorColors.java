@@ -1,5 +1,33 @@
-public class DecodeResistorColors {
+import java.text.DecimalFormat;
+import java.util.Arrays;
+import java.util.List;
 
+public class DecodeResistorColors {
+    private static final List<String> resistorSigFigs = Arrays.asList
+            ("black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "gray", "white");
+    public static String decodeResistorColors(String bands) {
+        String[] arr = bands.split(" ");
+        int ohms = 10*resistorSigFigs.indexOf(arr[0]);
+        ohms += resistorSigFigs.indexOf(arr[1]);
+        ohms *= Math.pow(10, resistorSigFigs.indexOf(arr[2]));
+
+        int tolerance;
+        if (arr.length < 4){
+            tolerance = 20;
+        } else if (arr[3].equals("gold")){
+            tolerance = 5;
+        } else {
+            tolerance = 10;
+        }
+
+        DecimalFormat f = new DecimalFormat("0.#");
+        if (ohms < 1000)
+            return String.format("%d ohms, %d%%", ohms, tolerance);
+        else if (ohms < 1000000)
+            return String.format("%sk ohms, %d%%", f.format((float)ohms/1000), tolerance);
+        else
+            return String.format("%sM ohms, %d%%", f.format((float)ohms/1000000), tolerance);
+    }
 }
 
 //Overview
