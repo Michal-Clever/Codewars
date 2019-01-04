@@ -1,5 +1,11 @@
 public class Circle {
-
+    public static double area(double radius)
+    {
+        if (radius <= 0)
+            throw new IllegalArgumentException();
+        else
+            return Math.PI*radius*radius;
+    }
 }
 
 //        Complete the function circleArea so that it will return the area of a circle with the given radius.
