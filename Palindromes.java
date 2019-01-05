@@ -1,5 +1,30 @@
 public class Palindromes {
-
+    public static int longestPalindrome(final String s) {
+        char[] symbols = new char[s.length() + 1];
+        symbols = s.toCharArray();
+        int longest = 1;
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = 0; j < s.length(); j++) {
+                if (symbols[i] == symbols[j] && i != j && i < j) {
+                    String temp = "";
+                    if (j == s.length() - 1) {
+                        temp = s.substring(i);
+                    }
+                    if (j != s.length() - 1) {
+                        temp = s.substring(i, j + 1);
+                    }
+                    String anotherTemp = new StringBuilder(temp).reverse().toString();
+                    if (temp.equals(anotherTemp) && temp.length() > longest) {
+                        longest = temp.length();
+                    }
+                }
+            }
+        }
+        if (s.length() == 0) {
+            return 0;
+        }
+        return longest;
+    }
 }
 
 
