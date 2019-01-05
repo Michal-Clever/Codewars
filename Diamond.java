@@ -1,5 +1,11 @@
 public class Diamond {
 
+    public static void main(String[] args) {
+
+        System.out.println(print(3));
+    }
+
+
     public static String print(int n) {
         if (n < 0 || n % 2 == 0) return null;
         String shape = "";
