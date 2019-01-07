@@ -1,4 +1,5 @@
 public class Rank {
+
 }
 
 //        To participate in a prize draw each one gives his/her firstname.
