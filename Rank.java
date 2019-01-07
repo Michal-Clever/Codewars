@@ -1,5 +1,66 @@
-public class Rank {
+import java.util.*;
 
+public class Rank {
+    public static String nthRank(String st, Integer[] we, int n) {
+        Map<Character, Integer> rank = Rank.rank();
+        if(st.equals("")) {
+            return "No participants";
+        }
+        String[] names = st.split(",");
+        if(names.length < n) {
+            return "Not enough participants";
+        }
+
+        int count = 0;
+        String duplicate = "";
+        int duplicateNumber = 0;
+        Map<Integer, String> list = new TreeMap<Integer, String>();
+        List<Integer> nums = new ArrayList<Integer>();
+        for(String name: names) {
+            if(list.get(Rank.winningNumber(name, we[count], rank)) == null) {
+                list.put(Rank.winningNumber(name, we[count], rank), name);
+                nums.add(Rank.winningNumber(name, we[count], rank));
+            } else {
+                duplicateNumber = Rank.winningNumber(name, we[count], rank);
+                duplicate = list.get(duplicateNumber);
+                list.put(Rank.winningNumber(name, we[count], rank), name);
+                if(name.charAt(0) > duplicate.charAt(0)) {
+                    list.put(duplicateNumber+1, duplicate);
+                    nums.add(duplicateNumber+1);
+                } else {
+                    list.put(duplicateNumber-1, duplicate);
+                    nums.add(duplicateNumber-1);
+                }
+            }
+            count++;
+        }
+        Collections.sort(nums);
+        Collections.reverse(nums);
+        System.out.println("Nums: " + nums);
+        System.out.println("List: " + list);
+        System.out.println(list.get(nums.get(n-1)));
+
+        return list.get(nums.get(n-1));
+    }
+
+    private static Map<Character, Integer> rank() {
+        Map<Character, Integer> rank = new HashMap<Character, Integer>();
+        int count = 1;
+        Character[] letters = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+        for(Character letter: letters) {
+            rank.put(letter, count);
+            count++;
+        }
+        return rank;
+    }
+
+    private static int winningNumber(String name, int weight, Map<Character, Integer> rank) {
+        int count = 0;
+        for(Character c: name.toLowerCase().toCharArray()) {
+            count += rank.get(c);
+        }
+        return (count + name.length()) * weight;
+    }
 }
 
 //        To participate in a prize draw each one gives his/her firstname.
