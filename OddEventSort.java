@@ -13,8 +13,6 @@ public class OddEventSort {
                 odd += s.charAt(i);
             }
         }
-
-
         return even + " " + odd;
     }
 }
