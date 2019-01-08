@@ -1,4 +1,22 @@
 public class OddEventSort {
+    public static String sortMyString(String s) {
+        String even = "";
+        String odd = "";
+
+        char[] c = s.toCharArray();
+        for (int i = 0; i < c.length; i++) {
+            if (i % 2 == 0) {
+                even += s.charAt(i);
+            }
+            else
+            {
+                odd += s.charAt(i);
+            }
+        }
+
+
+        return even + " " + odd;
+    }
 }
 
 //        Given a string S. You have to return another string such that even-indexed and odd-indexed characters of S
