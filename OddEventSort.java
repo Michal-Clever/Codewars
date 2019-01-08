@@ -1,5 +1,6 @@
 public class OddEventSort {
     public static String sortMyString(String s) {
+
         String even = "";
         String odd = "";
 
