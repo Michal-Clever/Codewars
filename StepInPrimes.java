@@ -1,5 +1,31 @@
 public class StepInPrimes {
 
+    private static boolean prime(long n) {
+        if (n == 2) return true;
+        else if ((n < 2) || (n % 2 == 0)) return false;
+        else {
+            for (long i = 3; i <= Math.sqrt(n); ++i) {
+                if (n % i == 0) return false;
+            }
+            return true;
+        }
+    }
+
+    public static long[] step(int g, long m, long n) {
+        long[] res = new long[2];
+        long i = m;
+        while (i <= n - g) {
+            if (prime(i) && prime(i + g)) {
+                res[0] = i;
+                res[1] = i + g;
+                //afficheArray(res);
+                return res;
+            }
+            i++;
+        }
+        return null;
+    }
+
 }
 
 //        The prime numbers are not regularly spaced.
