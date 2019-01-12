@@ -1,5 +1,13 @@
 public class Generator {
-
+    public static String nickname(String name) {
+        if (name.length() < 4) {
+            return "Error: Name too short";
+        } else if (name.charAt(2) == 'a' || name.charAt(2) == 'e' || name.charAt(2) == 'i'
+                || name.charAt(2) == 'o' || name.charAt(2) == 'u') {
+            return name.substring(0, 4);
+        }
+        return name.substring(0, 3);
+    }
 }
 
 //        Nickname Generator
