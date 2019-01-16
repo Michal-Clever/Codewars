@@ -1,5 +1,19 @@
 public class Solution {
-
+    public static int maxGap(int[] numbers) {
+        int res = 0;
+        int arr[] = numbers;
+        java.util.Arrays.sort(arr);
+        for (int i = 0; i < numbers.length - 1; i++) {
+            int r = numbers[i] - numbers[i + 1];
+            if (r < 0) {
+                r *= -1;
+            }
+            if (r > res) {
+                res = r;
+            }
+        }
+        return res;
+    }
 }
 
 //        Introduction and Warm-up (Highly recommended)
