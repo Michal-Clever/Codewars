@@ -1,5 +1,12 @@
 public class WhereIsMyParent {
+    static String findChildren(final String text) {
+        String str = "";
+        for (int i = 'A'; i <= 'Z'; i++)
+            if (text.indexOf((char) i) != -1)
+                str += (char) i + String.join("", text.split("[^" + Character.toLowerCase((char) i) + "]"));
 
+        return str;
+    }
 }
 
 //        Mothers arranged dance party for children in school.
