@@ -25,6 +25,6 @@ public class Solution {
 //
 //        eg:
 //
-//        Solution.validatePin("1234") === true
-//        Solution.validatePin("12345") === false
-//        Solution.validatePin("a234") === false
+//        fundamentals.Solution.validatePin("1234") === true
+//        fundamentals.Solution.validatePin("12345") === false
+//        fundamentals.Solution.validatePin("a234") === false
