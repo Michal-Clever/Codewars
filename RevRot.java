@@ -1,5 +1,21 @@
 public class RevRot {
 
+    public static String revRot(String strng, int sz) {
+
+        if (sz <= 0 || sz > strng.length()) return "";
+        if (strng.length() > sz)
+            return revRot(strng.substring(0, sz), sz) + revRot(strng.substring(sz), sz);
+        char[] nums = strng.toCharArray();
+        int sum = 0;
+
+        for (char num : nums) sum += num - '0';
+
+        StringBuilder sb = new StringBuilder();
+
+        if (sum % 2 == 0) return sb.append(strng).reverse().toString();
+        for (int i = 1; i < nums.length; i++) sb.append(nums[i]);
+        return sb.append(nums[0]).toString();
+    }
 }
 
 //        The input is a string str of digits. Cut the string into chunks
