@@ -20,7 +20,6 @@ public class ArithmeticFunction {
             default:
                 throw new IllegalArgumentException("Invalid argument: " + operator);
         }
-
         return result;
     }
 }
