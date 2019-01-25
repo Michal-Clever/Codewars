@@ -1,6 +1,9 @@
 package practiceAndRepeat;
 
 public class ShortestWord {
+
+
+
     public static int findShort(String s) {
         int min = Integer.MAX_VALUE;
         for (String each : s.split(" ")) {

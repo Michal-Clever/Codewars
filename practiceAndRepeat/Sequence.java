@@ -1,6 +1,8 @@
 package practiceAndRepeat;
 
 public class Sequence {
+
+
     public static int[] reverse(int n) {
         //your code
         int[] res = new int[n];
