@@ -1,13 +1,17 @@
 package fundamentals;
 
 import java.util.Arrays;
-import java.util.Collections;
+
 
 public class DescendingOrder {
     public static int sortDesc(final int num) {
-        String[] array = String.valueOf(num).split("");
-        Arrays.sort(array, Collections.reverseOrder());
-        return Integer.valueOf(String.join("", array));
+        String finalNumber = "";
+        char[] chars = ("" + num).toCharArray();
+        Arrays.sort(chars);
+        for (int i = chars.length - 1; i >= 0; i--) {
+            finalNumber += "" + String.valueOf(chars[i]);
+        }
+        return Integer.parseInt(finalNumber);
     }
 
 }
