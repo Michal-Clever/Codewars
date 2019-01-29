@@ -2,7 +2,15 @@ package practiceAndRepeat;
 
 public class SumOfPositive {
 
-
+    public static int sum(int[] arr) {
+        int result = 0;
+        for (int i : arr) {
+            if (i > 0) {
+                result += i;
+            }
+        }
+        return result;
+    }
 }
 //
 //    You get an array of numbers, return the sum of all of the positives ones.
