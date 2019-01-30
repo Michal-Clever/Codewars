@@ -2,7 +2,7 @@ package practiceAndRepeat;
 
 public class IsNdivisibleByXandY {
     public static boolean isDivisible(long n, long x, long y) {
-        return (x % n == 0) && (y % n == 0);
+        return (n % y == 0) && (n % x == 0);
     }
 
 }
