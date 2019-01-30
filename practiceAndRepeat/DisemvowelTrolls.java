@@ -1,6 +1,9 @@
 package practiceAndRepeat;
 
 public class DisemvowelTrolls {
+    public static String disemvowel(String str) {
+        return str.replaceAll("[aAeEiIoOuU]", "");
+    }
 
 }
 
