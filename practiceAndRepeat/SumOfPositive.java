@@ -4,6 +4,8 @@ public class SumOfPositive {
 
     public static int sum(int[] arr) {
         int result = 0;
+        String str = "uper";
+        str.toUpperCase();
         for (int i : arr) {
             if (i > 0) {
                 result += i;
