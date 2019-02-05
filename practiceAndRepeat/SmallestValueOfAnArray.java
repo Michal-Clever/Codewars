@@ -1,7 +1,16 @@
 package practiceAndRepeat;
 
 public class SmallestValueOfAnArray {
+    public static int findSmallest( final int[] numbers, final String toReturn ) {
 
+        int smallestIdx = 0;
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] < numbers[smallestIdx]) {
+                smallestIdx = i;
+            }
+        }
+        return "index".equals(toReturn) ? smallestIdx : numbers[smallestIdx];
+    }
 }
 
 
