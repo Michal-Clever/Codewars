@@ -2,6 +2,21 @@ package practiceAndRepeat;
 
 public class PlayingWithDigits {
 
+
+    public static long digPow(int n, int p) {
+        System.out.println("n = " + n + " p = " + p);
+        int number = 0;
+        p = p + (int) (Math.log10(n));
+        for (int i = n; i > 0; i /= 10) {
+            number += Math.pow(i % 10, p);
+            p--;
+        }
+        if (number % n == 0 && number / n > 0)
+            return number / n;
+        else
+            return -1;
+    }
+
 }
 
 //
