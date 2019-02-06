@@ -1,12 +1,12 @@
 package practiceAndRepeat;
 
 public class BeginnerLostWithoutAmap {
-    public static int[] map(int[] inputArray) {
+    public static int[] map(int[] arr) {
 
-        for (int i = 0; i < inputArray.length; i++) {
-            inputArray[i] = inputArray[i]*2;
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = arr[i]*2;
         }
-        return inputArray;
+        return arr;
     }
 }
 
