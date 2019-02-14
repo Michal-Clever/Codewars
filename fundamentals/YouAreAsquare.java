@@ -1,6 +1,10 @@
 package fundamentals;
 
 public class YouAreAsquare {
+    public static boolean isSquare(int n) {
+        return Math.sqrt(n) % 1 == 0;
+    }
+
 }
 
 //    A square of squares
