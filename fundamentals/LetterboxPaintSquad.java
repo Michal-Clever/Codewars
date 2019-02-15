@@ -3,6 +3,7 @@ package fundamentals;
 public class LetterboxPaintSquad {
 
 }
+
 //        Story
 //        You and a group of friends are earning some extra money
 //                in the school holidays by re-painting the numbers on people's letterboxes for a small fee.
