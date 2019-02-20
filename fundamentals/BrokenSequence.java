@@ -10,6 +10,7 @@ public class BrokenSequence {
             if (sequence.indexOf(i + "") == -1) return i;
         }
         return missing;
+
     }
 }
 
