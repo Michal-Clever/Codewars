@@ -1,7 +1,17 @@
 package fundamentals;
 
 public class BrakingWell {
+    public static double dist(double v, double mu) {    // suppose reaction time is 1
+        double g = 9.81;
+        v = v * 1000 / 3600;
+        return v * v / (2 * mu * g) + v;
+    }
 
+    public static double speed(double d, double mu) {   // suppose reaction time is 1
+        double g = 9.81;
+        double v = Math.sqrt(mu * g * (2 * d + mu * g)) - mu * g;
+        return v * 3600 / 1000;
+    }
 }
 
 
