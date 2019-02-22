@@ -2,7 +2,40 @@ package fundamentals;
 
 public class CorrectTheTimeString {
 
+    public static String timeCorrect(String timestring) {
+        String pattern = ("\\d\\d:\\d\\d:\\d\\d");
 
+
+        if (timestring == null) {
+            return null;
+        } else if (timestring.equals("")) {
+            return "";
+        } else if (!(timestring.matches(pattern))) {
+            return null;
+        } else {
+            int hours, minutes, seconds;
+
+            seconds = Integer.valueOf(timestring.substring(6, 8));
+            minutes = Integer.valueOf(timestring.substring(3, 5));
+            hours = Integer.valueOf(timestring.substring(0, 2));
+
+            if (seconds >= 60) {
+                minutes += (seconds / 60);
+                seconds -= 60;
+            }
+
+            if (minutes >= 60) {
+                hours += (minutes / 60);
+                minutes -= 60;
+            }
+
+            if (hours > 23) {
+                hours -= ((hours / 24) * 24);
+            }
+            return (String.format("%02d", hours) + ":" + String.format("%02d", minutes) + ":" + String.format("%02d", seconds));
+        }
+
+    }
 
 }
 
