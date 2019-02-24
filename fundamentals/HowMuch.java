@@ -2,7 +2,15 @@ package fundamentals;
 
 public class HowMuch {
 
+    public static String howmuch(int m, int n) {
+        StringBuilder result = new StringBuilder("[");
 
+        for (int x = Math.min(m, n); x <= Math.max(m, n); x++)
+            if ((x - 1) % 9 == 0 && (x - 2) % 7 == 0)
+                result.append(String.format("[M: %d B: %d C: %d]", x, ((x - 2) / 7), ((x - 1) / 9)));
+
+        return result.append("]").toString();
+    }
 }
 
 
