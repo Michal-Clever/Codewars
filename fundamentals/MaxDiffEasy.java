@@ -2,6 +2,7 @@ package fundamentals;
 
 import java.lang.reflect.Array;
 
+
 public class MaxDiffEasy {
 
     public static int maxDiff(int[] lst) {
