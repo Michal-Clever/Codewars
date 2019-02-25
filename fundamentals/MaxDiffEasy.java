@@ -1,8 +1,16 @@
 package fundamentals;
 
+import java.lang.reflect.Array;
+
 public class MaxDiffEasy {
 
-
+    public static int maxDiff(int[] lst) {
+        if (lst == null || lst.length == 0) {
+            return 0;
+        }
+        java.util.Arrays.sort(lst);
+        return lst[lst.length - 1] - lst[0];
+    }
 }
 
 //    You must implement a function maxDiff that return the difference between the biggest and the smallest value in a list(lst)
