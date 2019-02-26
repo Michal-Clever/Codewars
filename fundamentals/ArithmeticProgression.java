@@ -2,7 +2,16 @@ package fundamentals;
 
 public class ArithmeticProgression {
 
+    public static String arithmeticSequenceElements(int first, int step, long total) {
+        String result = Integer.toString(first);
+        int temp = first;
 
+        for (int i = 1; i < total; i++) {
+            temp += step;
+            result += ", " + temp;
+        }
+        return result;
+    }
 }
 
 //        In your class, you have started lessons about arithmetic progression.
