@@ -1,6 +1,7 @@
 package fundamentals;
 
 public class IsItNegativeZero0 {
+
     public static Boolean isNegativeZero(Float n) {
         return n.equals(-0f);
     }
