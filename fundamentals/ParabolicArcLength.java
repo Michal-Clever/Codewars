@@ -1,6 +1,23 @@
 package fundamentals;
 
 public class ParabolicArcLength {
+    public static double lenCurve(int n) {
+        // your code
+        double length = 0;
+        double width = 1 / (double) n;
+        double xcoordinate = 0;
+        double ycoordinate = 0;
+        double previousx = 0;
+        double previousy = 0;
+        for (int i = 1; i <= n; i++) {
+            xcoordinate = width * (double) i;
+            ycoordinate = xcoordinate * xcoordinate;
+            length += Math.sqrt((xcoordinate - previousx) * (xcoordinate - previousx) + (ycoordinate - previousy) * (ycoordinate - previousy));
+            previousx = xcoordinate;
+            previousy = ycoordinate;
+        }
+        return length;
+    }
 }
 
 //        We want to approximate the length of a curve representing a function y = f(x) with a<= x <= b.
