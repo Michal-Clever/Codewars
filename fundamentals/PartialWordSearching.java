@@ -4,7 +4,7 @@ import java.util.List;
 
 
 public class PartialWordSearching {
-    class WordSearch {
+
         static String[] findWord(String x, String[] y){
             List<String> result = new ArrayList<String>();
 
@@ -21,7 +21,7 @@ public class PartialWordSearching {
             }
         }
     }
-}
+
 
 //
 //    Write a method that will search an array of strings for all strings that contain another string, ignoring capitalization.
