@@ -6,25 +6,11 @@ public class ClockyMcClockFace {
         int angle = 271;
         System.out.println(whatTimeIsIt(angle));
     }
-
     public static String whatTimeIsIt(final double angle) {
-        String time = null;
-        int h = (int) Math.floor(angle / 30);
-        int m = (int) Math.floor(angle % 30 * 2);
-        if (angle == 0 || angle == 360)
-            time = "12:00";
-        else if (h < 1) {
-            if (m < 10) time = "12:0" + m;
-            else time = "12:" + m;
-        } else if (h < 10 && m < 10)
-            time = "0" + h + ":0" + m;
-        else if (h < 10 && m >= 10)
-            time = "0" + h + ":" + m;
-        else if (h >= 10 && m < 10)
-            time = h + ":0" + m;
-        else if (h >= 10 && m >= 10)
-            time = h + ":" + m;
-        return time;
+        int m = (int) (angle % 30 * 2),
+                h = (int) (angle / 30);
+        if (h == 0) h = 12;
+        return String.format("%02d:%02d", h, m);
     }
 }
 //
