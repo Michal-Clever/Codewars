@@ -3,7 +3,7 @@ package fundamentals;
 
 public class ClockyMcClockFace {
     public static void main(String[] args) {
-        int angle = 271;
+        int angle = 360;
         System.out.println(whatTimeIsIt(angle));
     }
     public static String whatTimeIsIt(final double angle) {
