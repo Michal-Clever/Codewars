@@ -1,6 +1,16 @@
 package fundamentals;
 
 public class ProductOfConsecutiveFibNumbers {
+
+    public static void main(String[] args) {
+
+
+
+
+
+    }
+
+
 }
 
 //        The Fibonacci numbers are the numbers in the following integer sequence (Fn):
