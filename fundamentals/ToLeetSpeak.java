@@ -1,6 +1,7 @@
 package fundamentals;
 
 public class ToLeetSpeak {
+
     static String toLeetSpeak(final String speak) {
         StringBuilder sb = new StringBuilder(speak.length());
         for (char c: speak.toCharArray()) {
