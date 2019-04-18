@@ -1,6 +1,7 @@
 package fundamentals;
 
 public class DecTools {
+
     public static int Digits(long n) {
         if (n == 0) return 1;
         int count = 0;
