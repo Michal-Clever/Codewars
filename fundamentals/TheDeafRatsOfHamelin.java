@@ -1,10 +1,17 @@
 package fundamentals;
 
 public class TheDeafRatsOfHamelin {
+
+    public static void main(String[] args) {
+        System.out.println(countDeafRats("~O~O~O~OP~O~OO~"));
+    }
+
     public static int countDeafRats(final String town) {
         String t = town.replaceAll(" ", "");
         int count = 0;
-        for (int i = 0; i < t.length(); i += 2) if (t.charAt(i) == 'O') count++;
+        for (int i = 0; i < t.length(); i += 2)
+            if (t.charAt(i) == 'O')
+                count++;
         return count;
     }
 }
