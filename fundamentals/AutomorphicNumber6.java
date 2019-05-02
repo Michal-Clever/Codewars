@@ -1,6 +1,10 @@
 package fundamentals;
 
-public class AutomorphicNumber {
+public class AutomorphicNumber6 {
+    public static void main(String[] args) {
+        System.out.println(autoMorphic(625));
+        System.out.println(autoMorphic(13));
+    }
     public static String autoMorphic(int n) {
         return (n * n + "").endsWith("" + n) ? "Automorphic" : "Not!!";
     }
