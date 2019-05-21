@@ -15,7 +15,7 @@ public class RoboticTattooRemoval {
 
 
 //    Sometimes people get tattoos, sometimes they wish they hadn't, sometimes the tattoos must go.
-// Lets create a robot that can remove tattoos.
+//      Lets create a robot that can remove tattoos.
 //
 //        Your robot function accepts one array argument called skinScan. I have supplied an example array below.
 //
