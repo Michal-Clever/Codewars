@@ -12,6 +12,7 @@ public class AreSame {
             Integer times = counter.get(n2);
             counter.put(n2, times == null ? 1 : times + 1);
         }
+
         for (int n : a) {
             int n2 = n * n;
             Integer times = counter.get(n2);
