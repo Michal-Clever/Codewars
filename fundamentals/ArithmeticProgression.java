@@ -10,6 +10,7 @@ public class ArithmeticProgression {
             temp += step;
             result += ", " + temp;
         }
+
         return result;
     }
 }
