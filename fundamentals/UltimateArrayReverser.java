@@ -1,6 +1,7 @@
 package fundamentals;
 
 public class UltimateArrayReverser {
+
     public static String[] reverse(String[] a) {
         String s = new StringBuilder(String.join("",a)).reverse().toString();
         String[] b = new String[a.length];
