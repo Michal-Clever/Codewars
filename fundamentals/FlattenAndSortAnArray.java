@@ -1,6 +1,28 @@
 package fundamentals;
+import java.util.Arrays;
 
 public class FlattenAndSortAnArray {
+    public static int[] flattenAndSort(int[][] array) {
+        int length = 0;
+        for(int[] line: array)
+            length = length + line.length;
+
+        //debug
+        System.out.println("length = " + length);
+
+        int[] out = new int[length];
+
+        int i = 0;
+        for(int[] line: array)
+            for(int cell: line) {
+                out[i] = cell;
+                i++;
+            }
+
+        Arrays.sort(out);
+
+        return out;
+    }
 }
 
 //    Given a two-dimensional array of integers,
