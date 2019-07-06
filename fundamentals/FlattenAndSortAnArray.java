@@ -7,7 +7,7 @@ public class FlattenAndSortAnArray {
         for(int[] line: array)
             length = length + line.length;
 
-        //debug
+        //debug z
         System.out.println("length = " + length);
 
         int[] out = new int[length];
