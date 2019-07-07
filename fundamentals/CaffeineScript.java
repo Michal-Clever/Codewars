@@ -1,7 +1,15 @@
 package fundamentals;
 
 public class CaffeineScript {
-
+    public static String caffeineBuzz(int n) {
+        String message = "mocha_missing!";
+        if (n != 0) {
+            if (n % 3 == 0) message = "Java";
+            if (n % 12 == 0) message = "Coffee";
+            if (n % 2 == 0) message += "Script";
+        }
+        return message;
+    }
 
 }
 //
