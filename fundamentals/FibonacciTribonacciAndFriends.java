@@ -3,13 +3,19 @@ import java.util.Arrays;
 
 public class FibonacciTribonacciAndFriends {
     public double[] xbonacci(double[] signature, int n) {
-        double[] xbonacci = Arrays.copyOf(signature, n);
-        for(int i = signature.length; i < n; i++){
-            for(int j = i; j >= i - signature.length; j--){
-                xbonacci[i] += xbonacci[j];
+        int x = signature.length;
+        double sum = 0;
+        double[] result = new double[n];
+        for(int i = 0; i < n; i++) {
+            if(i < x) {
+                result[i] = signature[i];
+                sum += result[i];
+            } else {
+                result[i] = sum;
+                sum = sum + sum - result[i - x];
             }
         }
-        return xbonacci;
+        return result;
     }
 }
 
