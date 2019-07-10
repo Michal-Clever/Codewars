@@ -2,6 +2,7 @@ package fundamentals;
 import java.util.Arrays;
 
 public class FibonacciTribonacciAndFriends {
+
     public double[] xbonacci(double[] signature, int n) {
         int x = signature.length;
         double sum = 0;
