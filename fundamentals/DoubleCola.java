@@ -23,6 +23,7 @@ public class DoubleCola {
         System.out.println(WhoIsNext(names,18));
         System.out.println(WhoIsNext(names,19));
         System.out.println(WhoIsNext(names,20));
+
     }
     public static String WhoIsNext(String[] names, int n){
         while ( n > names.length){
